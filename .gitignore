@@ -28,11 +28,7 @@ Preferences/
 !4DPop AppMaker.*
 
 # Miscellaneous
-DEV/
 *__Orphan__*
 ehthumbs.db
 Thumbs.db
-*.bbprojectd/
-Resources/_
 Resources/php.ini
-P4CONFIG
