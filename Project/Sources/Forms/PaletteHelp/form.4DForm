@@ -1,0 +1,2755 @@
+﻿{
+	"destination": "detailScreen",
+	"windowTitle": ":xliff:ColorChart_ColorChart",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 520,
+	"height": 600,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onUnload",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 1,
+					"width": 520,
+					"height": 600,
+					"stroke": "transparent"
+				},
+				"Zone de groupe3": {
+					"type": "groupBox",
+					"top": 157,
+					"left": 20,
+					"width": 480,
+					"height": 326,
+					"text": "Palette"
+				},
+				"Zone de groupe1": {
+					"type": "groupBox",
+					"top": 17,
+					"left": 20,
+					"width": 370,
+					"height": 120,
+					"text": ":xliff:ColorChart_HSL"
+				},
+				"Zone de groupe2": {
+					"type": "groupBox",
+					"top": 17,
+					"left": 410,
+					"width": 90,
+					"height": 119,
+					"text": ":xliff:ColorChart_RGB"
+				},
+				"Bouton2": {
+					"type": "button",
+					"top": 24,
+					"left": 572,
+					"width": 30,
+					"height": 25,
+					"dataSource": "Bouton1",
+					"action": "accept",
+					"style": "flat",
+					"text": "OK",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"stroke": "#FF6600",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Règle1": {
+					"type": "ruler",
+					"top": 45,
+					"left": 422,
+					"width": 20,
+					"height": 66,
+					"dataSource": "vR",
+					"max": 255,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Règle1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Règle2": {
+					"type": "ruler",
+					"top": 45,
+					"left": 450,
+					"width": 20,
+					"height": 66,
+					"dataSource": "vG",
+					"max": 255,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Règle2.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Règle3": {
+					"type": "ruler",
+					"top": 45,
+					"left": 478,
+					"width": 20,
+					"height": 66,
+					"dataSource": "vB",
+					"max": 255,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Règle3.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Règle4": {
+					"type": "ruler",
+					"top": 46,
+					"left": 110,
+					"width": 260,
+					"height": 16,
+					"dataSource": "vH",
+					"max": 360,
+					"graduationStep": 360,
+					"method": "ObjectMethods/Règle4.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Texte7": {
+					"type": "text",
+					"top": 47,
+					"left": 20,
+					"width": 80,
+					"height": 14,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:ColorChart_Hue"
+				},
+				"Règle5": {
+					"type": "ruler",
+					"top": 77,
+					"left": 110,
+					"width": 260,
+					"height": 16,
+					"dataSource": "vS",
+					"max": 100,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Règle5.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Texte8": {
+					"type": "text",
+					"top": 78,
+					"left": 20,
+					"width": 80,
+					"height": 14,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:ColorChart_Saturation"
+				},
+				"Règle6": {
+					"type": "ruler",
+					"top": 109,
+					"left": 110,
+					"width": 260,
+					"height": 16,
+					"dataSource": "vL",
+					"max": 100,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Règle6.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Texte9": {
+					"type": "text",
+					"top": 110,
+					"left": 20,
+					"width": 80,
+					"height": 14,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:ColorChart_Luminosity"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 187,
+					"left": 390,
+					"width": 90,
+					"height": 16,
+					"dataSource": "<>Color",
+					"dataSourceTypeHint": "number",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "solid",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": "0000000000",
+					"dragging": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle7": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle9": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle10": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle11": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle12": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle13": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle14": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle15": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle16": {
+					"type": "rectangle",
+					"top": 252,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle17": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle18": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle19": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle20": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle21": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle22": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle23": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle24": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle25": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle26": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle27": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle28": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle29": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle30": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle31": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle32": {
+					"type": "rectangle",
+					"top": 264,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle33": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle34": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle35": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle36": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle37": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle38": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle39": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle40": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle41": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle42": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle43": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle44": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle45": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle46": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle47": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle48": {
+					"type": "rectangle",
+					"top": 276,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle49": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle50": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle51": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle52": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle53": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle54": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle55": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle56": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle57": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle58": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle59": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle60": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle61": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle62": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle63": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle64": {
+					"type": "rectangle",
+					"top": 288,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle65": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle66": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle67": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle68": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle69": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle70": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle71": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle72": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle73": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle74": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle75": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle76": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle77": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle78": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle79": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle80": {
+					"type": "rectangle",
+					"top": 300,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle81": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle82": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle83": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle84": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle85": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle86": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle87": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle88": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle89": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle90": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle91": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle92": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle93": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle94": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle95": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle96": {
+					"type": "rectangle",
+					"top": 312,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle97": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle98": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle99": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle100": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle101": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle102": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle103": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle104": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle105": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle106": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle107": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle108": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle109": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle110": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle111": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle112": {
+					"type": "rectangle",
+					"top": 324,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle113": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle114": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle115": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle116": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle117": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle118": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle119": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle120": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle121": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle122": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle123": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle124": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle125": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle126": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle127": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle128": {
+					"type": "rectangle",
+					"top": 336,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle129": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle130": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle131": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle132": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle133": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle134": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle135": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle136": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle137": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle138": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle139": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle140": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle141": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle142": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle143": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle144": {
+					"type": "rectangle",
+					"top": 348,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle145": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle146": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle147": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle148": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle149": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle150": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle151": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle152": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle153": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle154": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle155": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle156": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle157": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle158": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle159": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle160": {
+					"type": "rectangle",
+					"top": 360,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle161": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle162": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle163": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle164": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle165": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle166": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle167": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle168": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle169": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle170": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle171": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle172": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle173": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle174": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle175": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle176": {
+					"type": "rectangle",
+					"top": 372,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle177": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle178": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle179": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle180": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle181": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle182": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle183": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle184": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle185": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle186": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle187": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle188": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle189": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle190": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle191": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle192": {
+					"type": "rectangle",
+					"top": 384,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle193": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle194": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle195": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle196": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle197": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle198": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle199": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle200": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle201": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle202": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle203": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle204": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle205": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle206": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle207": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle208": {
+					"type": "rectangle",
+					"top": 396,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle209": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle210": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle211": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle212": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle213": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle214": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle215": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle216": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle217": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle218": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle219": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle220": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle221": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle222": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle223": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle224": {
+					"type": "rectangle",
+					"top": 408,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle225": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle226": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle227": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle228": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle229": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle230": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle231": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle232": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle233": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle234": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle235": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle236": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle237": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle238": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle239": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle240": {
+					"type": "rectangle",
+					"top": 420,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle241": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 46,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle242": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 58,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle243": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 70,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle244": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 82,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle245": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 94,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle246": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 106,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle247": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 118,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle248": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 130,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle249": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 142,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle250": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 154,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle251": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 166,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle252": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 178,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle253": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 190,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle254": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 202,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle255": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 214,
+					"width": 13,
+					"height": 13
+				},
+				"Rectangle256": {
+					"type": "rectangle",
+					"top": 432,
+					"left": 226,
+					"width": 13,
+					"height": 13
+				},
+				"Grille de boutons1": {
+					"type": "buttonGrid",
+					"top": 252,
+					"left": 46,
+					"width": 193,
+					"height": 193,
+					"dataSource": "<>ColorPicker",
+					"columnCount": 16,
+					"rowCount": 16,
+					"method": "ObjectMethods/Grille de boutons1.4dm",
+					"events": [
+						"onClick",
+						"onDragOver"
+					]
+				},
+				"Popup Liste déroulante1": {
+					"type": "dropdown",
+					"top": 187,
+					"left": 45,
+					"width": 254,
+					"height": 19,
+					"dataSource": "<>PopMode",
+					"method": "ObjectMethods/Popup Liste déroulante1.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Case à cocher1": {
+					"type": "checkbox",
+					"top": 217,
+					"left": 45,
+					"width": 200,
+					"height": 16,
+					"dataSource": "<>WebSafe",
+					"text": ":xliff:ColorChart_WebColorsOnly",
+					"focusable": false,
+					"method": "ObjectMethods/Case à cocher1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Rectangle257": {
+					"type": "rectangle",
+					"top": 117,
+					"left": 425,
+					"width": 10,
+					"height": 10,
+					"fill": "#EE0000"
+				},
+				"Rectangle258": {
+					"type": "rectangle",
+					"top": 117,
+					"left": 453,
+					"width": 10,
+					"height": 10,
+					"fill": "#0FC400"
+				},
+				"Rectangle259": {
+					"type": "rectangle",
+					"top": 117,
+					"left": 480,
+					"width": 10,
+					"height": 10,
+					"fill": "#0000FF"
+				},
+				"Variable7": {
+					"type": "input",
+					"top": 254,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample9",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable7.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable26": {
+					"type": "input",
+					"top": 279,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample2",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable26.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable8": {
+					"type": "input",
+					"top": 279,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample10",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable8.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable27": {
+					"type": "input",
+					"top": 304,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample3",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable27.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable10": {
+					"type": "input",
+					"top": 304,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample11",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable10.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable28": {
+					"type": "input",
+					"top": 329,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample4",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable28.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 329,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample12",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable11.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable29": {
+					"type": "input",
+					"top": 354,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample5",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable29.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable12": {
+					"type": "input",
+					"top": 354,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample13",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable12.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable30": {
+					"type": "input",
+					"top": 379,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample6",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable30.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable13": {
+					"type": "input",
+					"top": 379,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample14",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable13.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable31": {
+					"type": "input",
+					"top": 404,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample7",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable31.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable14": {
+					"type": "input",
+					"top": 404,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample15",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable14.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable32": {
+					"type": "input",
+					"top": 429,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample8",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable32.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable15": {
+					"type": "input",
+					"top": 429,
+					"left": 350,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample16",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable15.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Texte4": {
+					"type": "text",
+					"top": 493,
+					"left": 20,
+					"width": 480,
+					"height": 95,
+					"textAlign": "left",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:ColorChart_InOrderTo"
+				},
+				"Variable17": {
+					"type": "input",
+					"top": 254,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName1",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable18": {
+					"type": "input",
+					"top": 279,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName2",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable19": {
+					"type": "input",
+					"top": 304,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName3",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable20": {
+					"type": "input",
+					"top": 329,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName4",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable21": {
+					"type": "input",
+					"top": 354,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName5",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable22": {
+					"type": "input",
+					"top": 379,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName6",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable23": {
+					"type": "input",
+					"top": 404,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName7",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable24": {
+					"type": "input",
+					"top": 429,
+					"left": 390,
+					"width": 90,
+					"height": 15,
+					"dataSource": "<>SampleName8",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "none",
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Variable25": {
+					"type": "input",
+					"top": 254,
+					"left": 310,
+					"width": 30,
+					"height": 15,
+					"dataSource": "<>Sample1",
+					"dataSourceTypeHint": "picture",
+					"borderStyle": "solid",
+					"contextMenu": "none",
+					"dragging": "custom",
+					"dropping": "custom",
+					"method": "ObjectMethods/Variable25.4dm",
+					"events": [
+						"onClick",
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					]
+				},
+				"Texte5": {
+					"type": "text",
+					"top": 189,
+					"left": 311,
+					"width": 70,
+					"height": 14,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:ColorChart_Ex"
+				},
+				"Texte6": {
+					"type": "text",
+					"top": 237,
+					"left": 310,
+					"width": 30,
+					"height": 13,
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": "Avt"
+				},
+				"Texte11": {
+					"type": "text",
+					"top": 237,
+					"left": 350,
+					"width": 30,
+					"height": 13,
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": "Arr"
+				},
+				"Rectangle260": {
+					"type": "rectangle",
+					"top": 453,
+					"left": 46,
+					"width": 88,
+					"height": 10,
+					"fill": "#000000"
+				},
+				"Rectangle261": {
+					"type": "rectangle",
+					"top": 453,
+					"left": 150,
+					"width": 88,
+					"height": 10
+				},
+				"Noir": {
+					"type": "button",
+					"top": 453,
+					"left": 46,
+					"width": 88,
+					"height": 10,
+					"display": false,
+					"method": "ObjectMethods/Noir.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Blanc": {
+					"type": "button",
+					"top": 453,
+					"left": 150,
+					"width": 88,
+					"height": 10,
+					"display": false,
+					"method": "ObjectMethods/Blanc.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"Variable33": {
+					"type": "input",
+					"top": 254,
+					"left": 250,
+					"width": 45,
+					"height": 190,
+					"dataSource": "<>FakePict",
+					"dataSourceTypeHint": "picture",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "custom",
+					"method": "ObjectMethods/Variable33.4dm",
+					"events": [
+						"onBeginDragOver"
+					]
+				},
+				"automatic_font": {
+					"type": "input",
+					"top": 0,
+					"left": 572,
+					"width": 150,
+					"height": 16,
+					"visibility": "hidden",
+					"stroke": "#FF6600",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"enterable": false,
+					"hideFocusRing": true,
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/automatic_font.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"rbtn_dec": {
+					"type": "radio",
+					"top": 222,
+					"left": 388,
+					"width": 43,
+					"height": 11,
+					"dataSource": "<>rbtn_dec",
+					"text": "Dec",
+					"fontFamily": ".Helvetica Neue DeskInterface",
+					"fontSize": 12,
+					"radioGroup": "Groupe2",
+					"method": "ObjectMethods/rbtn_dec.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"rbtn_hex": {
+					"type": "radio",
+					"top": 222,
+					"left": 435,
+					"width": 43,
+					"height": 11,
+					"dataSource": "<>rbtn_hex",
+					"text": "Hex",
+					"fontFamily": ".Helvetica Neue DeskInterface",
+					"fontSize": 12,
+					"radioGroup": "Groupe2",
+					"method": "ObjectMethods/rbtn_hex.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"Bouton2",
+				"Règle1",
+				"Règle2",
+				"Règle3",
+				"Règle4",
+				"Règle5",
+				"Règle6",
+				"Variable1",
+				"Popup Liste déroulante1",
+				"Case à cocher1",
+				"Groupe2",
+				"rbtn_dec",
+				"rbtn_hex"
+			]
+		}
+	],
+	"editor": {
+		"groups": {
+			"Groupe2": [
+				"rbtn_dec",
+				"rbtn_hex"
+			]
+		},
+		"activeView": "Vue 1",
+		"defaultView": "Vue 1",
+		"views": {
+			"Vue 1": {},
+			"Frames": {
+				"objects": [
+					"Zone de groupe3",
+					"Zone de groupe1",
+					"Zone de groupe2"
+				]
+			},
+			"Vue 3": {},
+			"Vue 4": {},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	}
+}
