@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="14">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="15">
 	<com.4d>
 		<database>
 			<cache size_fixed="32" size_maximum="100" size_reserved="128"/>
@@ -6,7 +6,7 @@
 		</database>
 		<compiler>
 			<typage default_for_numeric="1"/>
-			<options error_file="true" fat_binary="true"/>
+			<options error_file="true" fat_binary="true" target="all"/>
 		</compiler>
 		<general execute_host_database_event="true">
 			<mover always_display_dialog="2"/>
