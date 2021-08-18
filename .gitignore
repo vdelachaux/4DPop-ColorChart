@@ -1,4 +1,4 @@
-﻿# Ignore invisible files/folders except me
+# Ignore invisible files/folders except me
 .*
 !.gitignore
 
@@ -34,3 +34,4 @@ Resources/php.ini
 
 4DPop Color Chart.4DIndy
 Project/Trash/
+Libraries/lib4d-arm64.dylib

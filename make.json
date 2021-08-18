@@ -1,0 +1,13 @@
+{
+  "postBuild": {
+    "buildNumber": true, 
+    "owner": "4D SA", 
+    "InfoPlist": true, 
+    "remove": [
+      "Build/",
+      "Data/",
+      "Resources/php.ini",
+      "_config.yml"
+    ]
+  }
+}

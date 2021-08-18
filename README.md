@@ -4,4 +4,4 @@
 [![license](https://img.shields.io/github/license/vdelachaux/4DPop-ColorChart)](LICENSE)
 [![release](https://img.shields.io/github/v/release/vdelachaux/4DPop-ColorChart?include_prereleases)](https://github.com/vdelachaux/4DPop-ColorChart/releases/latest)
 
-# 4DPop-ColorChart
+# 4DPop ColorChart
