@@ -1,7 +1,8 @@
 {
   "name": ":xliff:ColorChart_ColorChart",
   "picture": "4DPop.png",
-  "tool": {
+  "handler": "_4DPopColorChart",
+  "tools": {
     "method": "ShowPalette"
   }
 }
