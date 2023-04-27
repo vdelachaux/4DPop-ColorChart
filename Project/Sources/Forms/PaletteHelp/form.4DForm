@@ -2719,7 +2719,6 @@
 				"Variable1",
 				"Popup Liste déroulante1",
 				"Case à cocher1",
-				"Groupe2",
 				"rbtn_dec",
 				"rbtn_hex"
 			]
@@ -2732,7 +2731,7 @@
 				"rbtn_hex"
 			]
 		},
-		"activeView": "Vue 1",
+		"activeView": "Vue 3",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
@@ -2751,5 +2750,10 @@
 			"Vue 8": {},
 			"Vue 9": {}
 		}
-	}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 3
 }

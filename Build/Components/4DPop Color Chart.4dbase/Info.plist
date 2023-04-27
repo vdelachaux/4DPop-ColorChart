@@ -6,11 +6,11 @@
     <key>CFBundleShortVersionString</key>
     <string>20R2</string>
     <key>CFBundleLongVersionString</key>
-    <string>20R2 (79)</string>
+    <string>20R2 (83)</string>
     <key>NSHumanReadableCopyright</key>
     <string>© 4D SAS 2009-2023</string>
     <key>CFBundleVersion</key>
-    <string>80</string>
+    <string>84</string>
     <key>CFBundleName</key>
     <string>4DPop Color Chart</string>
     <key>CFBundleGetInfoString</key>

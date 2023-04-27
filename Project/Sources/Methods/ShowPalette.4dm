@@ -1,34 +1,25 @@
 //%attributes = {}
-C_POINTER:C301($1)
-C_LONGINT:C283($2)
-
-C_LONGINT:C283($Win)
-C_POINTER:C301($Ptr)
+#DECLARE($run : Boolean)
 
 If (False:C215)
-	C_POINTER:C301(ShowPalette ;$1)
-	C_LONGINT:C283(ShowPalette ;$2)
+	C_BOOLEAN:C305(ShowPalette; $1)
 End if 
 
-C_LONGINT:C283(<>ShowPalette)
+var $data : Object
+var <>ShowPalette : Integer
 
-If (Count parameters:C259<2)
+If ($run)
 	
-	If (Count parameters:C259>0)
-		$Ptr:=$1
-	End if 
-	
-	If (Process state:C330(<>ShowPalette)<0) | (<>ShowPalette=0)
-		<>ShowPalette:=New process:C317("ShowPalette";0;"ShowPalette";$Ptr;0)
-	Else 
-		BRING TO FRONT:C326(<>ShowPalette)
-	End if 
-	
-Else 
-	
-	$Win:=Open form window:C675("PaletteHelp";Plain form window:K39:10;Horizontally centered:K39:1;Vertically centered:K39:4)
-	DIALOG:C40("PaletteHelp")
+	$data:=New object:C1471(\
+		"window"; Open form window:C675("PaletteHelp"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4; *))
+	DIALOG:C40("PaletteHelp"; $data)
 	CLOSE WINDOW:C154
 	
 	<>ShowPalette:=0
+	
+Else 
+	
+	<>ShowPalette:=New process:C317(Current method name:C684; 0; "$4DPop Color Chart"; True:C214; *)
+	BRING TO FRONT:C326(<>ShowPalette)
+	
 End if 
