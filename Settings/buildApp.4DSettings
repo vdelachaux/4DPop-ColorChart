@@ -30,7 +30,7 @@
       <MacCompiledDatabaseToWin></MacCompiledDatabaseToWin>
       <ServerEmbedsProjectDirectoryFile>False</ServerEmbedsProjectDirectoryFile>
     </CS>
-    <BuildApplicationName>4DPop Color Chart</BuildApplicationName>
+    <BuildApplicationName>4DPop ColorChart</BuildApplicationName>
     <BuildMacDestFolder>:Build:</BuildMacDestFolder>
     <ArrayExcludedPluginName>
       <ItemsCount>0</ItemsCount>
