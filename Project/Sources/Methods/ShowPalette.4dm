@@ -1,11 +1,8 @@
 //%attributes = {}
 #DECLARE($run : Boolean)
 
-If (False:C215)
-	C_BOOLEAN:C305(ShowPalette; $1)
-End if 
-
 var $data : Object
+
 var <>ShowPalette : Integer
 
 If ($run)

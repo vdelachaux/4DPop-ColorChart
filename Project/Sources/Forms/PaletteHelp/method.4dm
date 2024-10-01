@@ -3,31 +3,31 @@ Case of
 		//________________________________________
 	: (Form event code:C388=On Load:K2:1)
 		
-		C_LONGINT:C283(<>Color)
+		var <>Color : Integer
 		
-		C_PICTURE:C286(<>FakePict)
+		var <>FakePict : Picture
 		
-		C_PICTURE:C286(<>Sample1)
-		C_PICTURE:C286(<>Sample2)
-		C_PICTURE:C286(<>Sample3)
-		C_PICTURE:C286(<>Sample4)
-		C_PICTURE:C286(<>Sample5)
-		C_PICTURE:C286(<>Sample6)
-		C_PICTURE:C286(<>Sample7)
-		C_PICTURE:C286(<>Sample8)
-		C_PICTURE:C286(<>Sample9)
-		C_PICTURE:C286(<>Sample10)
-		C_PICTURE:C286(<>Sample11)
-		C_PICTURE:C286(<>Sample12)
-		C_PICTURE:C286(<>Sample13)
-		C_PICTURE:C286(<>Sample14)
-		C_PICTURE:C286(<>Sample15)
-		C_PICTURE:C286(<>Sample16)
+		var <>Sample1 : Picture
+		var <>Sample2 : Picture
+		var <>Sample3 : Picture
+		var <>Sample4 : Picture
+		var <>Sample5 : Picture
+		var <>Sample6 : Picture
+		var <>Sample7 : Picture
+		var <>Sample8 : Picture
+		var <>Sample9 : Picture
+		var <>Sample10 : Picture
+		var <>Sample11 : Picture
+		var <>Sample12 : Picture
+		var <>Sample13 : Picture
+		var <>Sample14 : Picture
+		var <>Sample15 : Picture
+		var <>Sample16 : Picture
 		
-		//LECTURE DES PRÉFÉRENCES
+		// LECTURE DES PRÉFÉRENCES
 		Form:C1466.preferences:=pop.Preferences.new("Color_Chart")
 		
-		//set default values
+		// Set default values
 		var $i : Integer
 		var $o : Object
 		
@@ -46,10 +46,10 @@ Case of
 		
 		$o:=Form:C1466.preferences.get()
 		
-		C_LONGINT:C283(<>rbtn_dec; <>rbtn_hex)
+		var <>rbtn_dec; <>rbtn_hex : Integer
 		
 		<>rbtn_dec:=Num:C11($o.decimalFormat)
-		<>rbtn_hex:=Choose:C955(<>rbtn_dec; 1; 0)
+		<>rbtn_hex:=<>rbtn_dec ? 1 : 0
 		OBJECT SET FORMAT:C236(<>Color; Choose:C955(<>rbtn_dec; "&x"; "|DecColorFormat"))
 		
 		ARRAY LONGINT:C221(<>_SampleValue; 0)
@@ -63,14 +63,15 @@ Case of
 			
 		End for 
 		
-		C_TEXT:C284(<>SampleName1)
-		C_TEXT:C284(<>SampleName2)
-		C_TEXT:C284(<>SampleName3)
-		C_TEXT:C284(<>SampleName4)
-		C_TEXT:C284(<>SampleName5)
-		C_TEXT:C284(<>SampleName6)
-		C_TEXT:C284(<>SampleName7)
-		C_TEXT:C284(<>SampleName8)
+		var <>SampleName1 : Text
+		
+		var <>SampleName2 : Text
+		var <>SampleName3 : Text
+		var <>SampleName4 : Text
+		var <>SampleName5 : Text
+		var <>SampleName6 : Text
+		var <>SampleName7 : Text
+		var <>SampleName8 : Text
 		
 		ARRAY TEXT:C222($_SampleNames; 0)
 		COLLECTION TO ARRAY:C1562($o.samplenames; $_SampleNames)
@@ -78,11 +79,11 @@ Case of
 		For ($i; 1; Size of array:C274($_SampleNames); 1)
 			
 			$Ptr:=Get pointer:C304("<>SampleName"+String:C10($i))
-			$Ptr->:=Choose:C955(Length:C16($_SampleNames{$i})#0; $_SampleNames{$i}; Get localized string:C991("ColorChart_Sample")+" "+String:C10($i))  //sample ou echantillon
+			$Ptr->:=Length:C16($_SampleNames{$i})#0 ? $_SampleNames{$i} : Localized string:C991("ColorChart_Sample")+" "+String:C10($i)  // Sample ou echantillon
 			
 		End for 
 		
-		//INITIALISATION DU DIALOGUE AVEC UNE PALETTE PAR DEFAUT EN DEMI TEINTES
+		// INITIALISATION DU DIALOGUE AVEC UNE PALETTE PAR DEFAUT EN DEMI TEINTES
 		
 		vH:=180
 		vS:=50
@@ -93,18 +94,18 @@ Case of
 		// @UPDATE@ 12/04/15 - Mise en commentaire - OBJET FIXER COULEURS RVB(*;"TestObject";0;<>Color)
 		
 		ARRAY TEXT:C222(<>PopMode; 6)
-		<>PopMode{1}:=Get localized string:C991("ColorChart_Mode1")
-		<>PopMode{2}:=Get localized string:C991("ColorChart_Mode2")
-		<>PopMode{3}:=Get localized string:C991("ColorChart_Mode3")
-		<>PopMode{4}:=Get localized string:C991("ColorChart_Mode4")
-		<>PopMode{5}:=Get localized string:C991("ColorChart_Mode5")
-		<>PopMode{6}:=Get localized string:C991("ColorChart_Mode6")
+		<>PopMode{1}:=Localized string:C991("ColorChart_Mode1")
+		<>PopMode{2}:=Localized string:C991("ColorChart_Mode2")
+		<>PopMode{3}:=Localized string:C991("ColorChart_Mode3")
+		<>PopMode{4}:=Localized string:C991("ColorChart_Mode4")
+		<>PopMode{5}:=Localized string:C991("ColorChart_Mode5")
+		<>PopMode{6}:=Localized string:C991("ColorChart_Mode6")
 		
 		<>PopMode:=1
 		<>ColorPicker:=1
 		
 		ARRAY LONGINT:C221(<>_Colors; 256)
-		C_LONGINT:C283(<>ColorPicker)
+		var <>ColorPicker : Integer
 		
 		GOTO OBJECT:C206(<>FakePict)
 		
@@ -120,7 +121,7 @@ Case of
 		Case of 
 				
 				//----------------------------------------
-			: (<>PopMode=1)  //256 hues
+			: (<>PopMode=1)  // 256 hues
 				
 				For ($i; 1; 256; 1)
 					
@@ -131,7 +132,8 @@ Case of
 				End for 
 				
 				//----------------------------------------
-			: (<>PopMode=2)  //256 saturations
+				
+			: (<>PopMode=2)  // 256 saturations
 				
 				For ($i; 1; 256; 1)
 					
@@ -142,7 +144,8 @@ Case of
 				End for 
 				
 				//----------------------------------------
-			: (<>PopMode=3)  //256 lights
+				
+			: (<>PopMode=3)  // 256 lights
 				
 				For ($i; 1; 256; 1)
 					
@@ -153,7 +156,8 @@ Case of
 				End for 
 				
 				//----------------------------------------
-			: (<>PopMode=4)  //16 hues, 16 luminosities
+				
+			: (<>PopMode=4)  // 16 hues, 16 luminosities
 				
 				For ($i; 1; 16; 1)
 					
@@ -168,7 +172,7 @@ Case of
 				End for 
 				
 				//----------------------------------------
-			: (<>PopMode=5)  //16 hues, 16 saturations
+			: (<>PopMode=5)  // 16 hues, 16 saturations
 				
 				For ($i; 1; 16; 1)
 					
@@ -236,6 +240,7 @@ Case of
 		End for 
 		
 		$c:=New collection:C1472
+		
 		ARRAY TO COLLECTION:C1563($c; $_SampleNames)
 		Form:C1466.preferences.set("samplenames"; $c)
 		
