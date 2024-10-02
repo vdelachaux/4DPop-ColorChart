@@ -24,4 +24,4 @@ jobs:
             sign-certificate: "Vincent de Lachaux (DYRKW64QA9)"
       - name: Upload
         run: |
-          gh release upload ${{github.event.release.tag_name}} build/4DPop-Bookmarks.zip
+          gh release upload ${{github.event.release.tag_name}} build/4DPop-ColorChart.zip
