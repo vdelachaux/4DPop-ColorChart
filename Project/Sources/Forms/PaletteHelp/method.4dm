@@ -25,7 +25,7 @@ Case of
 		var <>Sample16 : Picture
 		
 		// LECTURE DES PRÉFÉRENCES
-		Form:C1466.preferences:=pop.Preferences.new("Color_Chart")
+		Form:C1466.preferences:=cs:C1710.pop.Preferences.new("Color_Chart")
 		
 		// Set default values
 		var $i : Integer
