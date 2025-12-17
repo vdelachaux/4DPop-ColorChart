@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Ligne 1 -->
+  <rect x="0"   y="0"   width="150" height="100" fill="#2ECC71"/>
+  <rect x="150" y="0"   width="150" height="100" fill="#3498DB"/>
+
+  <!-- Ligne 2 -->
+  <rect x="0"   y="100" width="150" height="100" fill="#27AE5F"/>
+  <rect x="150" y="100" width="150" height="100" fill="#2980B9"/>
+
+  <!-- Ligne 3 -->
+  <rect x="0"   y="200" width="150" height="100" fill="#E57D21"/>
+  <rect x="150" y="200" width="150" height="100" fill="#E74C3C"/>
+</svg>
