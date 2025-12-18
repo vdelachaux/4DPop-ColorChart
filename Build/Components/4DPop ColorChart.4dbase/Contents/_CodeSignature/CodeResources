@@ -6,15 +6,11 @@
 	<dict>
 		<key>Resources/4DPop.json</key>
 		<data>
-		OMkFocrXF7qnW2Y0l0uLM8klsLY=
-		</data>
-		<key>Resources/4DPop.png</key>
-		<data>
-		hYBz8HRLRDQFB2v9fOr4WVmlINA=
+		S2f6ZWG0qlD7ZrkQLVgXZgbyX/s=
 		</data>
 		<key>Resources/InfoPlist.strings</key>
 		<data>
-		j4bCxxcKgv9XravXh3npZignhP0=
+		i8JX5E8704YRh5N7DmBuaSMF2ho=
 		</data>
 		<key>Resources/en.lproj/ColorChart.xlf</key>
 		<dict>
@@ -43,6 +39,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/logo.svg</key>
+		<data>
+		g0dgS6cY3zRMrRK/CYqzFD3IhWo=
+		</data>
 		<key>Resources/php.ini</key>
 		<data>
 		husPUmIQlX5JS1/yAv3oH2Pl7h0=
@@ -54,7 +54,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			au0PsZZ+uMieK4KM0HesvK2vHh8=
+			KSA/dZ+tWM6GacsvOSZNeX5/ta4=
 			</data>
 			<key>requirement</key>
 			<string>identifier "4DPop ColorChart.4DZ" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = DYRKW64QA9</string>
@@ -63,28 +63,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2aU7YK1MmwhjoKXzR1azULTSKiCxLL414hYUVCJtcHE=
+			N4Agy5t4EQApE8cITEXkSEm0Hl7Cwo4+UxFWUode22E=
 			</data>
 		</dict>
 		<key>Resources/4DPop.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gvNh2pLASLBsgEGlbvC/41E/IbkYvKJAKGU105317wU=
-			</data>
-		</dict>
-		<key>Resources/4DPop.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Jyr1v32C/O4sz+n5SQ8iwmCJ8Yi5cKHXqIlvB4kh9kk=
+			6t8tK9sSnIusEGZvMS8l4MoTAlNMiz9tSdy7yHjTvSM=
 			</data>
 		</dict>
 		<key>Resources/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OHfaVRAyt7UB8dIcxEZPQb9w40MspjE6+8FqXpWbu+4=
+			POAfZWj3lesfZ9art5nVA7jUsVr9vzwLBrPlDB8VGpM=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/ColorChart.xlf</key>
@@ -113,6 +106,13 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>Resources/logo.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			J35Om/NkGyFnmzKSM6+B1N6jh43D6uOObvzThzC6MnI=
+			</data>
 		</dict>
 		<key>Resources/php.ini</key>
 		<dict>
